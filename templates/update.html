@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      Employee Number:<input type="text" name="eno" value="{{employee_data.eno}}"><br>
+      Employee Name:<input type="text" name="ename" value="{{employee_data.ename}}"><br>
+      Employee Salary:<input type="text" name="esal" value="{{employee_data.esal}}"><br>
+      Employeee City:<input type="text" name="ecity" value="{{employee_data.ecity}}"><br>
+      Employee Addr:<input type="text" name="eaddr" value="{{employee_data.eaddr}}"><br>
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>

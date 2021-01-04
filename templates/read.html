@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+
+      <table border="1">
+        <tbody>
+          <thead>
+            <th>ENO</th>
+            <th>ENAME</th>
+            <th>ESAL</th>
+            <th>ECITY</th>
+            <th>EADDR</th>
+            <th>ACTION</th>
+          </thead>
+        {% for i in employee_list %}
+          <tr>
+            <td><h1>{{i.eno}}</h1></td>
+            <td><h1>{{i.ename}}</h1></td>
+            <td><h1>{{i.esal}}</h1></td>
+            <td><h1>{{i.ecity}}</h1></td>
+            <td><h1>{{i.eaddr}}</h1></td>
+            <td><h1><a href="/update/{{i.id}}" class="btn btn-primary">UPDATE</a></h1></td>
+            <td><h1><a href="/delete/{{i.id}}" class="btn btn-primary">DELETE</a></h1></td>
+          </tr>
+        {% endfor %}
+      </table><br><br>
+      <a href="/insert" class="btn btn-success">INSERT DATA</a>
+
+
+
+
+
+  </body>
+</html>
